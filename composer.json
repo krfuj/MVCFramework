@@ -1,0 +1,16 @@
+{
+    "name": "hp/mvc-framework",
+    "autoload": {
+        "psr-4": {
+            "app\\":"./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sakwa Presley",
+            "email": "presleyingolo@gmail.com"
+        }
+    ],
+    
+    "require": {}
+}
