@@ -11,10 +11,18 @@ namespace app\core;
 
  class Application
  {    
+      public static string $ROOT_DIR;
       public Router $router;
-      public function __construct()
+      public Request $request;
+      public Response $response;
+      public static Application $app;
+      public function __construct($rootPath)
       {
+            self::$ROOT_DIR = $rootPath;
+            self::$app = $this;
             $this->router = new Router();
+            $this->response = new Response();
+            $this->request = new Request($this->router );
       }
 
       public function run()
